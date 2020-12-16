@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: poda
+  namespace: namespacea
+  labels:
+    type: user-created
+spec:
+  containers:
+  - name: nginx-cont-poda
+    image: nginx
+    ports:
+    - name: ngnixport
+      containerPort: 6379
+      protocol: TCP    

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: podb
+  namespace: namespaceb
+  labels:
+    type: user-created
+spec:
+  containers:
+  - name: nginx-cont-podb
+    image: nginx
+    ports:
+    - name: ngnixport
+      containerPort: 6379
+      protocol: TCP    

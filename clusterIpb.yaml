@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: clusterip-serviceb
+  namespace: namespaceb
+spec:
+  selector:
+    type: user-created
+  ports:
+  - protocol: TCP
+    port: 80

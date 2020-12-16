@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-nginx-deploymenta
+  namespace: namespacea
+spec:
+  selector:
+    matchLabels:
+      type: user-created
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        type: user-created
+    spec:
+      containers:
+      - name: my-nginx-container-a
+        image: nginx
+        ports:
+        - containerPort: 80
