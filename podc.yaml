@@ -5,6 +5,7 @@ metadata:
   namespace: namespacea
   labels:
     type: user-created
+    tag: servicea
 spec:
   containers:
   - name: nginx-cont-podc

@@ -1,20 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-nginx-deploymenta
-  namespace: namespacea
+  name: my-nginx-deploymentb
+  namespace: namespaceb
 spec:
   selector:
     matchLabels:
-      type: user-created
+      type: system-created
   replicas: 2
   template:
     metadata:
       labels:
-        type: user-created
+        type: system-created
+        tag: serviceb
     spec:
       containers:
-      - name: my-nginx-container-a
+      - name: my-nginx-container-b
         image: nginx
         ports:
         - containerPort: 80

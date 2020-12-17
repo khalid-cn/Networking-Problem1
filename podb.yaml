@@ -5,6 +5,7 @@ metadata:
   namespace: namespaceb
   labels:
     type: user-created
+    tag: serviceb
 spec:
   containers:
   - name: nginx-cont-podb

@@ -5,7 +5,9 @@ metadata:
   name: deny-all-ingress-egress
   namespace: namespacea
 spec:
-  podSelector: {}
+  podSelector:
+    matchLabels:
+      tag: servicea
   policyTypes:
   - Ingress
   - Egress
@@ -16,14 +18,20 @@ metadata:
   name: allow-within-same-namespace
   namespace: namespacea
 spec:
-  podSelector: {}
+  podSelector:
+    matchLabels:
+      tag: servicea
   policyTypes:
   - Ingress
   - Egress
   ingress:
   - from:
-    - podSelector: {}
+    - podSelector:
+        matchLabels:
+          tag: servicea
   egress:
   - to:
-    - podSelector: {}
+    - podSelector:
+        matchLabels:
+          tag: servicea
 ...    

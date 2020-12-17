@@ -1,11 +1,11 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: clusterip-serviceb
-  namespace: namespaceb
+  name: clusterip-servicea
+  namespace: namespacea
 spec:
   selector:
-    type: user-created
+    tag: servicea
   ports:
   - protocol: TCP
     port: 80
