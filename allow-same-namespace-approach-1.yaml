@@ -4,22 +4,17 @@ metadata:
   name: allow-within-same-namespace
   namespace: namespacea
 spec:
-  podSelector: 
-    matchLabels:
-      tag: servicea
+  podSelector: {}
   policyTypes:
     - Ingress
     - Egress
   ingress:
     - from:
-        - namespaceSelector:
-            matchLabels:
-              tag: servicea
+      - namespaceSelector:
+          matchLabels:
+            tag: servicea
   egress:
     - to:
-        - namespaceSelector:
-            matchLabels:
-              tag: servicea
-  ports:
-    - protocol: TCP
-      port: 6379
+      - namespaceSelector:
+          matchLabels:
+            tag: servicea
