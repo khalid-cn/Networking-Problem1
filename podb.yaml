@@ -12,5 +12,5 @@ spec:
     image: nginx
     ports:
     - name: ngnixport
-      containerPort: 6379
+      containerPort: 80
       protocol: TCP    
