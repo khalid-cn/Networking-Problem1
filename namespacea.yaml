@@ -2,3 +2,5 @@ kind: Namespace
 apiVersion: v1
 metadata:
   name: namespacea
+  labels: 
+    tag: servicea
